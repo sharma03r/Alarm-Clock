@@ -53,7 +53,8 @@ function displayTimer() {
         `${hours}:${minutes}:${seconds}`
       ) {
         alert(
-          "Time to wake up!" + `It is ${alarm.alarmHour}:${alarm.alarmMinute}`
+          "Time to wake up!" +
+            `It is ${alarm.alarmHour}:${alarm.alarmMinute}:${alarm.alarmSecond}`
         );
         alarmSound.play();
         alarmSound.loop = true;
@@ -69,6 +70,8 @@ const inputCheck = (inputValue) => {
   }
   return inputValue;
 };
+
+//Adding event listener to all the input boxes
 
 hourInput.addEventListener("input", () => {
   hourInput.value = inputCheck(hourInput.value);
